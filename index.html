@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Calculadora para churrasco que ajuda a determinar as quantidades ideais de carne, bebidas e cerveja para seu evento">
+    <link rel="preload" href="./assets/soroush-karimi-YQimR9fquY8-unsplash.jpg" as="image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="icon" href="./assets/ico.png" type="image/png">
+    <title>Churrascômetro - Calculadora para Churrasco</title>
+</head>
+
+<body>
+    <main class="main-content">
+        <article class="informacoes">
+            <header>
+                <h1 class="titulo">Churrascômetro: O Calculador Perfeito para seu Churrasco!</h1>
+            </header>
+            
+            <section>
+                <p class="descricao">Prepare seu churrasco sem erro! O Churrascômetro é a ferramenta ideal para calcular as quantidades certas de carne, cerveja e bebidas para o seu evento, garantindo que nada falte e que todos aproveitem sem desperdício.</p>
+            
+                <h2 class="titulo-secao"><i class="fas fa-question-circle"></i> Como funciona?</h2>
+                <p class="descricao">Basta informar:</p>
+                
+                <ol class="lista-numerada">
+                    <li><i class="fas fa-male"></i> Número de adultos</li>
+                    <li><i class="fas fa-child"></i> Número de crianças</li>
+                    <li><i class="fas fa-clock"></i> Duração do churrasco</li>
+                </ol>
+                              
+                <p class="descricao">O Churrascômetro calcula automaticamente:</p>
+                <ul class="lista-itens">
+                    <li><i class="fas fa-drumstick-bite"></i> Carne → Quantidade ideal (400g a 650g por pessoa)</li>
+                    <li><i class="fas fa-beer"></i> Cerveja → Medida correta (1,2L a 2L por pessoa)</li>
+                    <li><i class="fas fa-glass-whiskey"></i> Bebidas → Refrigerante e água (1L a 1,5L por pessoa)</li>
+                </ul>
+     
+                <p class="descricao">E tem mais:</p>
+                <ul class="lista-vantagens">
+                    <li><i class="fas fa-check-circle"></i> Preciso → Evita faltar comida ou sobrar demais!</li>
+                    <li><i class="fas fa-check-circle"></i> Prático → Cálculo rápido e automático!</li>
+                    <li><i class="fas fa-check-circle"></i> Personalizado → Ajustável para adultos e crianças!</li>              
+                </ul>
+            
+                <p class="destaque"><i class="fas fa-fire-alt"></i> Planje seu churrasco em segundos! <i class="fas fa-glass-cheers"></i></p>
+            </section>
+        </article>
+
+        <aside class="container">
+            <h1>Calcule o necessário para seu churrasco!</h1>
+            
+            <div class="input-group">
+                <label for="adultos"><i class="fas fa-male"></i> Adultos</label>
+                <input id="adultos" name="adultos" type="number" min="0" placeholder="Quantidade de adultos">
+            </div>
+            
+            <div class="input-group">
+                <label for="criancas"><i class="fas fa-child"></i> Crianças</label>
+                <input id="criancas" name="criancas" type="number" min="0" placeholder="Quantidade de crianças">
+            </div>
+            
+            <div class="input-group">
+                <label for="duracao"><i class="fas fa-clock"></i> Duração (horas)</label>
+                <input id="duracao" name="duracao" type="number" min="1" placeholder="Duração do evento">
+            </div>
+            
+            <div class="botoes-container">
+                <button id="btnCalcular" onclick="calcular()">
+                    <i class="fas fa-calculator"></i> Calcular
+                </button>
+                <button id="btnResetar" onclick="resetar()">
+                    <i class="fas fa-redo"></i> Resetar
+                </button>
+            </div>
+            
+            <div id="resultado">
+                <div class="resultado-item" id="carne">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <span>Carne: </span>
+                    <span class="valor">0g</span>
+                </div>
+                <div class="resultado-item" id="cerveja">
+                    <i class="fas fa-beer"></i>
+                    <span>Cerveja: </span>
+                    <span class="valor">0L</span>
+                </div>
+                <div class="resultado-item" id="bebidas">
+                    <i class="fas fa-glass-whiskey"></i>
+                    <span>Bebidas: </span>
+                    <span class="valor">0L</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="./script.js" defer></script>
+</body>
+</html>
